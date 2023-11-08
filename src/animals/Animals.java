@@ -1,6 +1,8 @@
 package animals;
 
-public class Animals {
+import action.Action;
+
+public abstract class Animals implements Action {
     protected String kind;
 
     protected String name;
@@ -23,16 +25,15 @@ public class Animals {
     public String getName() {
         return name;
     }
+
+    @Override
     public void movement() {
         System.out.printf("%s moves on four legs. ", getName());
     }
 
+    @Override
     public void voice(String voice) {
         System.out.printf("Voices like \"%s\". ", voice);
-    }
-
-    public Animals view() {
-        return new Animals(kind, name, colour, tail, mane);
     }
 
     public void getInfo() {
