@@ -22,6 +22,10 @@ public class Dog extends Animals {
         System.out.printf("%s moves on five legs. ", getName());
     }
 
+    @Override
+    public void voice(String voice) {
+        System.out.printf("Voices like \"%s\". ", voice);
+    }
 
     public void dogTrack() {
         System.out.printf("%s tracks the aim. ", getName());

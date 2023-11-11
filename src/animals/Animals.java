@@ -4,7 +4,6 @@ import action.Action;
 
 public abstract class Animals implements Action {
     protected String kind;
-
     protected String name;
     protected String colour;
     protected boolean tail;
@@ -17,23 +16,12 @@ public abstract class Animals implements Action {
         this.tail = tail;
         this.mane = mane;
     }
-
     public String getKind() {
         return kind;
     }
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void movement() {
-        System.out.printf("%s moves on four legs. ", getName());
-    }
-
-    @Override
-    public void voice(String voice) {
-        System.out.printf("Voices like \"%s\". ", voice);
     }
 
     public void getInfo() {
