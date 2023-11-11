@@ -1,8 +1,8 @@
 package animals;
 
-import action.Action;
+import actions.Actions;
 
-public abstract class Animals implements Action {
+public abstract class Animals implements Actions {
     protected String kind;
     protected String name;
     protected String colour;
@@ -15,9 +15,6 @@ public abstract class Animals implements Action {
         this.colour = colour;
         this.tail = tail;
         this.mane = mane;
-    }
-    public String getKind() {
-        return kind;
     }
 
     public String getName() {

@@ -8,13 +8,12 @@ public class Cat extends Animals {
     public void movement() {
         System.out.printf("%s moves on five legs. ", getName());
     }
-
     @Override
     public void voice(String voice) {
         System.out.printf("Voices like \"%s\". ", voice);
     }
 
     public void chaseAfterMice() {
-        System.out.println("chasing mice around the apartment");
+        System.out.printf("%s chasing mice around the apartment. ", getName());
     }
 }

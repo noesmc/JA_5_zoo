@@ -1,6 +1,6 @@
-package action;
+package actions;
 
-public interface Action {
+public interface Actions {
 
     void movement();
 

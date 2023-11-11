@@ -1,10 +1,16 @@
 import animals.*;
+import birds.*;
+import fish.*;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        chooseType();
+    }
+
+    private static void chooseType() {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -16,12 +22,7 @@ public class Main {
         boolean exit = false;
 
         do {
-            System.out.printf("""
-                Choose the number of kind u want:
-                1. %s,
-                2. %s,
-                3. %s
-                """, cat.getKind(), dog.getKind(), lion.getKind());
+            printTypes();
             try {
                 {
                     x = Integer.parseInt(scanner.next());
@@ -29,6 +30,7 @@ public class Main {
                         case 1 -> {
                             cat.getInfo();
                             cat.movement();
+                            cat.chaseAfterMice();
                             cat.voice("Meeeeeooow");
                         }
 
@@ -36,6 +38,7 @@ public class Main {
                             dog.getInfo();
                             dog.movement();
                             dog.voice("Wooooof");
+                            dog.dogTrack();
                             dog.feed();
                         }
 
@@ -43,6 +46,7 @@ public class Main {
                             lion.getInfo();
                             lion.movement();
                             lion.voice("Rrrrrrrr");
+                            lion.lionHunt();
                         }
 
                         default -> System.out.println("Out of bound");
@@ -53,5 +57,35 @@ public class Main {
                 System.out.println("Wrong Input!");
             }
         } while (!exit);
+    }
+
+    private static void printTypes() {
+        System.out.printf("""
+                Choose the number of kind u want:
+                %s
+                1. %s,
+                2. %s,
+                3. %s,
+                %s
+                4. %s,
+                5. %s,
+                6. %s
+                %s
+                7. %s,
+                8. %s,
+                9. %s
+                """,
+            Animals.class.getPackageName().toUpperCase(),
+            Cat.class.getSimpleName(),
+            Dog.class.getSimpleName(),
+            Lion.class.getSimpleName(),
+            Birds.class.getPackageName().toUpperCase(),
+            Eagle.class.getSimpleName(),
+            Gull.class.getSimpleName(),
+            Ostrich.class.getSimpleName(),
+            Fish.class.getPackageName().toUpperCase(),
+            Chimera.class.getSimpleName(),
+            Pike.class.getSimpleName(),
+            Shark.class.getSimpleName());
     }
 }

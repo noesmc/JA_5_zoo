@@ -15,7 +15,7 @@ public class Lion extends Animals {
         System.out.printf("Voices like \"%s\". ", voice);
     }
 
-    public static void lionHunt() {
-        System.out.println("The lion is hunting its prey!");
+    public void lionHunt() {
+        System.out.printf("%s is hunting its prey. ", getName());
     }
 }
