@@ -1,7 +1,5 @@
 package fish;
 
-import actions.Actions;
-
 import java.util.Calendar;
 
 public abstract class Fish {
