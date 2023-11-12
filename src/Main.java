@@ -14,9 +14,15 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        Cat cat = new Cat("Cat", "Pure", "Black", true, false);
-        Dog dog = new Dog("Dog", "Jack", "Black", true, false);
-        Lion lion = new Lion("Lion", "Simba", "Black", true, true);
+        Cat cat = new Cat(Cat.class.getSimpleName(), "Pure", "Black", 2017);
+        Dog dog = new Dog(Cat.class.getSimpleName(), "Jack", "Black", 2018);
+        Lion lion = new Lion(Cat.class.getSimpleName(), "Simba", "Black", 2020);
+        Eagle eagle = new Eagle(Cat.class.getSimpleName(), "Oasis", "Black", 2015);
+        Gull gull = new Gull(Cat.class.getSimpleName(), "Bacchic", "Black", 2022);
+        Ostrich ostrich = new Ostrich(Cat.class.getSimpleName(), "Mimi", "Grey", 2020);
+        Chimera chimera = new Chimera(Cat.class.getSimpleName(), "Black", 2017);
+        Pike pike = new Pike(Cat.class.getSimpleName(), "Black", 2018);
+        Shark shark = new Shark(Cat.class.getSimpleName(), "Black", 2020);
 
         int x;
         boolean exit = false;
@@ -37,16 +43,47 @@ public class Main {
                         case 2 -> {
                             dog.getInfo();
                             dog.movement();
+                            dog.track();
                             dog.voice("Wooooof");
-                            dog.dogTrack();
-                            dog.feed();
                         }
 
                         case 3 -> {
                             lion.getInfo();
                             lion.movement();
+                            lion.hunt();
                             lion.voice("Rrrrrrrr");
-                            lion.lionHunt();
+                        }
+                        case 4 -> {
+                            eagle.getInfo();
+                            eagle.movement();
+                            eagle.hunt();
+                            eagle.voice("Squeak-squeak");
+                        }
+
+                        case 5 -> {
+                            gull.getInfo();
+                            gull.movement();
+                            gull.voice("Aaaaaaaaa");
+                        }
+
+                        case 6 -> {
+                            ostrich.getInfo();
+                            ostrich.movement();
+                            ostrich.voice("Whoo-hoo");
+                        }
+                        case 7 -> {
+                            chimera.getInfo();
+                            chimera.movement();
+                        }
+
+                        case 8 -> {
+                            pike.getInfo();
+                            pike.movement();
+                        }
+
+                        case 9 -> {
+                            shark.getInfo();
+                            shark.movement();
                         }
 
                         default -> System.out.println("Out of bound");
@@ -75,15 +112,15 @@ public class Main {
                 8. %s,
                 9. %s
                 """,
-            Animals.class.getPackageName().toUpperCase(),
+            Animals.class.getSimpleName().toUpperCase(),
             Cat.class.getSimpleName(),
             Dog.class.getSimpleName(),
             Lion.class.getSimpleName(),
-            Birds.class.getPackageName().toUpperCase(),
+            Birds.class.getSimpleName().toUpperCase(),
             Eagle.class.getSimpleName(),
             Gull.class.getSimpleName(),
             Ostrich.class.getSimpleName(),
-            Fish.class.getPackageName().toUpperCase(),
+            Fish.class.getSimpleName().toUpperCase(),
             Chimera.class.getSimpleName(),
             Pike.class.getSimpleName(),
             Shark.class.getSimpleName());

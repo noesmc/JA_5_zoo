@@ -1,13 +1,13 @@
 package animals;
 
 public class Lion extends Animals {
-    public Lion(String kind, String name, String colour, boolean tail, boolean mane) {
-        super(kind, name, colour, tail, mane);
+    public Lion(String kind, String name, String colour, int yearOfBirth) {
+        super(kind, name, colour, yearOfBirth);
     }
 
     @Override
     public void movement() {
-        System.out.printf("%s moves on five legs. ", getName());
+        System.out.printf("%s moves on four legs. ", getName());
     }
 
     @Override
@@ -15,7 +15,7 @@ public class Lion extends Animals {
         System.out.printf("Voices like \"%s\". ", voice);
     }
 
-    public void lionHunt() {
+    public void hunt() {
         System.out.printf("%s is hunting its prey. ", getName());
     }
 }
