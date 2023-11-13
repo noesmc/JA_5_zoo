@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        chooseKind();
+        selectKind();
     }
 
-    private static void chooseKind() {
+    private static void selectKind() {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -29,7 +29,7 @@ public class Main {
 
         do {
             System.out.printf("""
-                            Choose the number of kind u want:
+                            Select the number of kind u want:
                             1. %s
                             2. %s
                             3. %s
@@ -45,10 +45,11 @@ public class Main {
 
                         case 1 -> {
                             System.out.printf("""
-                                            Choose a representative of the species "Animals":
+                                            Select a representative of the species "Animals":
                                             1. %s
                                             2. %s
                                             3. %s
+                                            4. Back to selecting a species
                                             """,
                                     Cat.class.getSimpleName(),
                                     Dog.class.getSimpleName(),
@@ -73,16 +74,18 @@ public class Main {
                                     lion.hunt();
                                     lion.voice("Rrrrrrrr");
                                 }
+                                case 4 -> selectKind();
                                 default -> System.out.println("Out of bound");
                             }
                         }
 
                         case 2 -> {
                             System.out.printf("""
-                                            Choose a representative of the species "Birds":
+                                            Select a representative of the species "Birds":
                                             1. %s
                                             2. %s
                                             3. %s
+                                            4. Back to selecting a species
                                             """,
                                     Eagle.class.getSimpleName(),
                                     Gull.class.getSimpleName(),
@@ -105,16 +108,18 @@ public class Main {
                                     ostrich.movement();
                                     ostrich.voice("Whoo-hoo");
                                 }
+                                case 4 -> selectKind();
                                 default -> System.out.println("Out of bound");
                             }
                         }
 
                         case 3 -> {
                             System.out.printf("""
-                                            Choose a representative of the species Animals:
+                                            Select a representative of the species Animals:
                                             1. %s
                                             2. %s
                                             3. %s
+                                            4. Back to selecting a species
                                             """,
                                     Chimera.class.getSimpleName(),
                                     Pike.class.getSimpleName(),
@@ -133,6 +138,7 @@ public class Main {
                                     shark.getInfo();
                                     shark.movement();
                                 }
+                                case 4 -> selectKind();
                                 default -> System.out.println("Out of bound");
                             }
                         }
