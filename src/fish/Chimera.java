@@ -5,7 +5,8 @@ public class Chimera extends Fish {
         super(kind, colour, yearOfBirth);
     }
 
-    public void movement() {
+    @Override
+    public void move() {
         System.out.printf("%s moves on four legs. ", getKind());
     }
 

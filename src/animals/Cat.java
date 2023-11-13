@@ -1,12 +1,12 @@
 package animals;
 
-public class Cat extends Animals {
-    public Cat(String kind, String name, String colour, int yearOfBirth) {
-        super(kind, name, colour, yearOfBirth);
+public class Cat extends Animal {
+    public Cat(String name, String colour, int yearOfBirth) {
+        super(name, colour, yearOfBirth);
     }
 
     @Override
-    public void movement() {
+    public void move() {
         System.out.printf("%s moves on four legs. ", getName());
     }
 

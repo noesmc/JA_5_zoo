@@ -1,12 +1,12 @@
 package birds;
 
-public class Eagle extends Birds {
+public class Eagle extends Bird {
     public Eagle(String kind, String name, String colour, int yearOfBirth) {
         super(kind, name, colour, yearOfBirth);
     }
 
     @Override
-    public void movement() {
+    public void move() {
         System.out.printf("%s moves on four legs. ", getName());
     }
 

@@ -1,8 +1,9 @@
 package fish;
 
+import actions.Move;
 import java.util.Calendar;
 
-public abstract class Fish {
+public abstract class Fish implements Move {
     protected String kind;
     protected String colour;
     protected int yearOfBirth;
@@ -22,10 +23,9 @@ public abstract class Fish {
         Calendar calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         return year;
-
     }
 
-    public abstract void movement();
+    public abstract void move();
 
     public void getInfo() {
         System.out.printf("The kind is \"%s\", %s's colour is %s. He is %d. ",

@@ -6,7 +6,7 @@ public class Shark extends Fish {
     }
 
     @Override
-    public void movement() {
+    public void move() {
         System.out.printf("%s moves on four legs. ", getKind());
     }
 }

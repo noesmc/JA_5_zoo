@@ -1,8 +1,6 @@
 package actions;
 
-public interface Actions {
-
-    void movement();
+public interface Voice {
 
     void voice(String voice);
 }

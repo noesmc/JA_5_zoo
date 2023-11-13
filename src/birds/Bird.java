@@ -1,16 +1,17 @@
-package animals;
+package birds;
 
-import actions.Actions;
+import actions.Move;
+import actions.Voice;
+
 import java.util.Calendar;
 
-
-public abstract class Animals implements Actions {
+public abstract class Bird implements Voice, Move {
     protected String kind;
     protected String name;
     protected String colour;
     protected int yearOfBirth;
 
-    public Animals(String kind, String name, String colour, int yearOfBirth) {
+    public Bird(String kind, String name, String colour, int yearOfBirth) {
         this.kind = kind;
         this.name = name;
         this.colour = colour;

@@ -4,8 +4,8 @@ public class Pike extends Fish {
     public Pike(String kind, String colour, int yearOfBirth) {
         super(kind, colour, yearOfBirth);
     }
-
-    public void movement() {
+    @Override
+    public void move() {
         System.out.printf("%s moves on four legs. ", getKind());
     }
 
