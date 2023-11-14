@@ -1,13 +1,14 @@
 package birds;
 
 public class Gull extends Bird {
-    public Gull(String kind, String name, String colour, int yearOfBirth) {
-        super(kind, name, colour, yearOfBirth);
+    public Gull(String name, String colour, int yearOfBirth) {
+        super(name, colour, yearOfBirth);
     }
 
     @Override
     public void move() {
-        System.out.printf("%s moves on four legs. ", getName());
+        System.out.printf("%s move around using their wings to fly, they can also walk and swim on the surface " +
+                          "of the water. ", getName());
     }
 
     @Override
@@ -15,7 +16,7 @@ public class Gull extends Bird {
         System.out.printf("Voices like \"%s\". ", voice);
     }
 
-    public void chaseAfterMice() {
-        System.out.printf("%s chasing mice. ", getName());
+    public void swim() {
+        System.out.printf("%s can swim in water. ", getName());
     }
 }

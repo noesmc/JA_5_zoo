@@ -1,15 +1,11 @@
 package fish;
 
 public class Pike extends Fish {
-    public Pike(String kind, String colour, int yearOfBirth) {
-        super(kind, colour, yearOfBirth);
-    }
-    @Override
-    public void move() {
-        System.out.printf("%s moves on four legs. ", getKind());
+    public Pike(String colour, int yearOfBirth) {
+        super(colour, yearOfBirth);
     }
 
-    public void chaseAfterMice() {
-        System.out.printf("%s chasing mice. ", getKind());
+    public void holdAndAttack() {
+        System.out.printf("%s is capable of holding prey in its teeth and then attacking lightning fast. ", getKind());
     }
 }

@@ -2,6 +2,7 @@ package animals;
 
 import actions.Move;
 import actions.Voice;
+
 import java.util.Calendar;
 
 
@@ -30,12 +31,16 @@ public abstract class Animal implements Voice, Move {
 
     }
 
+    public void move() {
+        System.out.printf("%s moves on four legs. ", getName());
+    }
+
     public void getInfo() {
         System.out.printf("The kind is \"%s\", called %s. %s's colour is %s. He is %d. ",
-                kind,
-                name,
-                name,
-                colour,
-                getYear() - yearOfBirth);
+            kind,
+            name,
+            name,
+            colour,
+            getYear() - yearOfBirth);
     }
 }

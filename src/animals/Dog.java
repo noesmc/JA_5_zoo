@@ -6,11 +6,6 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void move() {
-        System.out.printf("%s moves on four legs. ", getName());
-    }
-
-    @Override
     public void voice(String voice) {
         System.out.printf("Voices like \"%s\". ", voice);
     }

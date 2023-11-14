@@ -60,9 +60,9 @@ public class Main {
 
     private static void bundleAnimals() {
         Scanner scanner = new Scanner(System.in);
-        Cat cat = new Cat("Pure", "Black", 2017);
+        Cat cat = new Cat("Pure", "White", 2017);
         Dog dog = new Dog("Jack", "Black", 2018);
-        Lion lion = new Lion("Simba", "Black", 2020);
+        Lion lion = new Lion("Simba", "Ginger", 2019);
         switch (Integer.parseInt(scanner.next())) {
             case 1 -> {
                 cat.getInfo();
@@ -89,9 +89,9 @@ public class Main {
 
     private static void bundleBirds() {
         Scanner scanner = new Scanner(System.in);
-        Eagle eagle = new Eagle(Eagle.class.getSimpleName(), "Oasis", "Black", 2015);
-        Gull gull = new Gull(Gull.class.getSimpleName(), "Bacchic", "Black", 2022);
-        Ostrich ostrich = new Ostrich(Ostrich.class.getSimpleName(), "Mimi", "Grey", 2020);
+        Eagle eagle = new Eagle("Oasis", "Brown", 2023);
+        Gull gull = new Gull("Bacchic", "White", 2022);
+        Ostrich ostrich = new Ostrich("Mimi", "Black plumage and white tail", 2019);
         switch (Integer.parseInt(scanner.next())) {
             case 1 -> {
                 eagle.getInfo();
@@ -102,11 +102,14 @@ public class Main {
             case 2 -> {
                 gull.getInfo();
                 gull.move();
+                gull.swim();
                 gull.voice("Aaaaaaaaa");
             }
             case 3 -> {
                 ostrich.getInfo();
                 ostrich.move();
+                ostrich.run();
+                ostrich.defend();
                 ostrich.voice("Whoo-hoo");
             }
             case 4 -> selectKind();
@@ -116,21 +119,24 @@ public class Main {
 
     private static void bundleFish() {
         Scanner scanner = new Scanner(System.in);
-        Chimera chimera = new Chimera(Chimera.class.getSimpleName(), "Black", 2017);
-        Pike pike = new Pike(Pike.class.getSimpleName(), "Black", 2018);
-        Shark shark = new Shark(Shark.class.getSimpleName(), "Black", 2020);
+        Chimera chimera = new Chimera("White", 2022);
+        Pike pike = new Pike("Black", 2023);
+        Shark shark = new Shark( "Grey", 2022);
         switch (Integer.parseInt(scanner.next())) {
             case 1 -> {
                 chimera.getInfo();
                 chimera.move();
+                chimera.hide();
             }
             case 2 -> {
                 pike.getInfo();
                 pike.move();
+                pike.holdAndAttack();
             }
             case 3 -> {
                 shark.getInfo();
                 shark.move();
+                shark.moveAndHunt();
             }
             case 4 -> selectKind();
             default -> System.out.println("Out of bound");
