@@ -35,7 +35,7 @@ public abstract class Bird implements Voice, Move {
     }
 
     public void getInfo() {
-        System.out.printf("The kind is \"%s\", called %s. %s's colour is %s. He is %d. ",
+        System.out.printf("The kind is \"%s\", called %s. %s's colour is %s. He is %d years old. ",
             kind,
             name,
             name,

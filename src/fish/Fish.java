@@ -31,7 +31,7 @@ public abstract class Fish implements Move {
     }
 
     public void getInfo() {
-        System.out.printf("The kind is \"%s\", %s's colour is %s. He is %d. ",
+        System.out.printf("The kind is \"%s\", %s's colour is %s. He is %d years old. ",
             kind,
             kind,
             colour,
