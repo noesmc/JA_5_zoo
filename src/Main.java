@@ -10,7 +10,7 @@ public class Main {
         try {
             selectKind();
         } catch (NumberFormatException e) {
-            System.out.println("Wrong Input!");
+            System.out.println("Wrong Input, 123!");
         }
     }
 
